@@ -1,9 +1,15 @@
 # start-electron-application
 
-### Run app
+### Usual stuff
+installing dependencies   
+`yarn install`
+
+### Run app as script
 `yarn start`
 
-### make binary
-`yarn make`
-you can find linux binary here `out\start-electron-application-linux32-x64`
-you can find win binary here `out\start-electron-application-win32-x64`
+
+### make binary and run as binary
+build binary for your app `yarn make`
+and run it for:
+Linux  `./out/start-electron-application-linux32-x64/start-electron-application`  
+Win `out\start-electron-application-win32-x64\start-electron-application.exe`
