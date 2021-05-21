@@ -1,0 +1,52 @@
+{
+  "name": "start-electron-application",
+  "version": "1.0.0",
+  "description": "start and build electron application example",
+  "main": "main.js",
+  "repository": "git@github.com:sirdir/start-electron-application.git",
+  "author": "Tymur Kubai aka SirDiR <phddir@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.55",
+    "@electron-forge/maker-deb": "^6.0.0-beta.55",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.55",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.55",
+    "@electron-forge/maker-zip": "^6.0.0-beta.55",
+    "electron": "^12.0.9"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0"
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "start_electron_application"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  }
+}
